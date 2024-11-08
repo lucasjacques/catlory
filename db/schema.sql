@@ -1,9 +1,9 @@
-CREATE DATABASE react_mysql_db;
+CREATE DATABASE calorie_tracker;
 
-USE react_mysql_db;
+USE calorie_tracker;
 
-CREATE TABLE users (
+CREATE TABLE calorie_entries (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    email VARCHAR(255) NOT NULL
+    date DATE DEFAULT (CURRENT_DATE),
+    calories INT NOT NULL
 );
