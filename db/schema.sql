@@ -9,4 +9,7 @@ CREATE TABLE calorie_entries (
 );
 
 ALTER TABLE calorie_entries
+ADD COLUMN entry_date DATE NOT NULL;
+
+ALTER TABLE calorie_entries
 ADD COLUMN name VARCHAR(255) NOT NULL;
