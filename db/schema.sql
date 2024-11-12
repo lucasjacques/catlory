@@ -7,3 +7,6 @@ CREATE TABLE calorie_entries (
     date DATE DEFAULT (CURRENT_DATE),
     calories INT NOT NULL
 );
+
+ALTER TABLE calorie_entries
+ADD COLUMN entry_date DATE NOT NULL;
