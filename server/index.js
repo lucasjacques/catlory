@@ -25,12 +25,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// API endpoint to insert calorie data
+// API endpoint to insert calorie data with name and date
 app.post('/api/calories', (req, res) => {
-  const { name, calories } = req.body;
-  const query = 'INSERT INTO calorie_entries (name, calories) VALUES (?, ?)';
+  const { name, calories, date } = req.body;
+  const query = 'INSERT INTO calorie_entries (name, calories, entry_date) VALUES (?, ?, ?)';
 
-  db.query(query, [name, calories], (err, result) => {
+  db.query(query, [name, calories, date], (err, result) => {
     if (err) {
       console.error('Error inserting data:', err);
       res.status(500).send('Server error');
